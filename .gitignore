@@ -1,83 +1,83 @@
-/Lens Craft/[Ll]ibrary/
-/Lens Craft/[Tt]emp/
-/Lens Craft/[Oo]bj/
-/Lens Craft/[Ll]ogs/
-/Lens Craft/[Uu]ser[Ss]ettings/
-/Lens Craft/[Mm]emoryCaptures/
-/Lens Craft/[Rr]ecordings/
-/Lens Craft/.utmp/
+/My project 3/[Ll]ibrary/
+/My project 3/[Tt]emp/
+/My project 3/[Oo]bj/
+/My project 3/[Ll]ogs/
+/My project 3/[Uu]ser[Ss]ettings/
+/My project 3/[Mm]emory[Cc]aptures/
+/My project 3/[Rr]ecordings/
+/My project 3/.utmp/
+/My project 3/[Bb]uild/
+/My project 3/[Bb]uilds/
+/My project 3/ServerData/
 
-/Lens Craft/[Bb]uild/
-/Lens Craft/[Bb]uilds/
-/Lens Craft/ServerData/
+/My project 3/.vs/
+/My project 3/.idea/
+/My project 3/.gradle/
+/My project 3/.consulo/
+/My project 3/ExportedObj/
+/My project 3/UIElementsSchema/
 
-/Lens Craft/.vs/
-/Lens Craft/.idea/
-/Lens Craft/.gradle/
-/Lens Craft/.consulo/
-/Lens Craft/ExportedObj/
-/Lens Craft/[Aa]ssets/Plugins/Editor/JetBrains*
+/My project 3/[Aa]ssets/Plugins/Editor/JetBrains*
+/My project 3/*.DotSettings.user
 
-/Lens Craft/.vscode/*
-!/Lens Craft/.vscode/settings.json
-!/Lens Craft/.vscode/tasks.json
-!/Lens Craft/.vscode/launch.json
-!/Lens Craft/.vscode/extensions.json
-!/Lens Craft/.vscode/*.code-snippets
+/My project 3/.vscode/*
+!/My project 3/.vscode/settings.json
+!/My project 3/.vscode/tasks.json
+!/My project 3/.vscode/launch.json
+!/My project 3/.vscode/extensions.json
+!/My project 3/.vscode/*.code-snippets
 
-/Lens Craft/*.csproj
-/Lens Craft/*.unityproj
-/Lens Craft/*.sln
-/Lens Craft/*.slnx
-/Lens Craft/*.suo
-/Lens Craft/*.user
-/Lens Craft/*.userprefs
-/Lens Craft/*.pidb
-/Lens Craft/*.booproj
-/Lens Craft/*.svd
-/Lens Craft/*.pdb
-/Lens Craft/*.mdb
-/Lens Craft/*.opendb
-/Lens Craft/*.VC.db
-/Lens Craft/*.DotSettings.user
+/My project 3/*.csproj
+/My project 3/*.unityproj
+/My project 3/*.sln
+/My project 3/*.slnx
+/My project 3/*.suo
+/My project 3/*.user
+/My project 3/*.userprefs
+/My project 3/*.pidb
+/My project 3/*.booproj
+/My project 3/*.svd
+/My project 3/*.pdb
+/My project 3/*.mdb
+/My project 3/*.opendb
+/My project 3/*.VC.db
 
-/Lens Craft/*.pidb.meta
-/Lens Craft/*.pdb.meta
-/Lens Craft/*.mdb.meta
+/My project 3/*.pidb.meta
+/My project 3/*.pdb.meta
+/My project 3/*.mdb.meta
 
-/Lens Craft/*.log
-/Lens Craft/sysinfo.txt
-/Lens Craft/mono_crash.*
+/My project 3/*.log
+/My project 3/sysinfo.txt
+/My project 3/mono_crash.*
 
-/Lens Craft/*.apk
-/Lens Craft/*.aab
-/Lens Craft/*.app
-/Lens Craft/*.unitypackage
-/Lens Craft/*.unitypackage.meta
+/My project 3/*.apk
+/My project 3/*.aab
+/My project 3/*.app
+/My project 3/*.unitypackage
+/My project 3/*.unitypackage.meta
 
-/Lens Craft/**/*.blend1
-/Lens Craft/**/*.blend1.meta
+/My project 3/**/*.blend1
+/My project 3/**/*.blend1.meta
 
-/Lens Craft/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+/My project 3/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
-/Lens Craft/[Aa]ssets/StreamingAssets/aa*
-/Lens Craft/[Aa]ssets/AddressableAssetsData/link.xml*
-/Lens Craft/[Aa]ssets/Addressables_Temp*
-/Lens Craft/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/My project 3/[Aa]ssets/StreamingAssets/aa*
+/My project 3/[Aa]ssets/AddressableAssetsData/link.xml*
+/My project 3/[Aa]ssets/Addressables_Temp*
+/My project 3/[Aa]ssets/AddressableAssetsData/*/*.bin*
 
-/Lens Craft/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
-/Lens Craft/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
-/Lens Craft/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
-/Lens Craft/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
+/My project 3/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db
+/My project 3/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta
+/My project 3/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers
+/My project 3/[Aa]ssets/Unity.VisualScripting.Generated/VisualScripting.Core/Property Providers.meta
 
-/Lens Craft/UIElementsSchema/
-/Lens Craft/[Aa]ssets/[Ss]ceneDependencyCache*
+/My project 3/[Aa]ssets/[Ss]ceneDependencyCache*
 
-/Lens Craft/CapturedPhotos/
-/Lens Craft/CapturedImages/
-/Lens Craft/PhotoCaptures/
-/Lens Craft/CameraCaptures/
-/Lens Craft/Screenshots/
+/My project 3/CapturedPhotos/
+/My project 3/CapturedImages/
+/My project 3/PhotoCaptures/
+/My project 3/CameraCaptures/
+/My project 3/Screenshots/
 
 .DS_Store
 .AppleDouble
@@ -107,7 +107,6 @@ $RECYCLE.BIN/
 
 .vs/
 .idea/
-
 *.user
 *.userosscache
 *.suo
@@ -120,7 +119,6 @@ mono_crash.*
 TestResults/
 coverage/
 coverage-results/
-
 *.coverage
 *.coveragexml
 
