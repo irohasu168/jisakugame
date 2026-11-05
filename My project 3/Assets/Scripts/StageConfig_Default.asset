@@ -12,56 +12,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9640477795389e449bbc9a0e7819cbe6, type: 3}
   m_Name: StageConfig_Default
   m_EditorClassIdentifier: 
-  boxSize: {x: 14, y: 8, z: 18}
-  wallThickness: 0.5
-  wallVisualHeight: 0.6
-  wallVisualThickness: 0.8
-  wallColliderHeight: 8
-  wallColliderThickness: 0.8
-  gridX: 9
+  boxSize: {x: 140, y: 8, z: 180}
+  wallThickness: 5
+  wallVisualHeight: 6
+  wallVisualThickness: 8
+  wallColliderHeight: 80
+  wallColliderThickness: 8
+  gridX: 90
   gridY: 4
-  gridZ: 11
+  gridZ: 110
   cellSize: {x: 1.2, y: 1.2, z: 1.2}
   gridPadding: {x: 1, y: 1, z: 1}
   defaultDifficulty: 2
   difficultySettings:
   - difficulty: 0
-    blockFillRate: 0.08
+    blockFillRate: 0.008
     breakableBlockRate: 0.5
-    safeRadius: 4
+    safeRadius: 40
     mineFillRate: 0.02
     mineMaxCount: 2
-    mineMinDistanceFromSpawn: 5
+    mineMinDistanceFromSpawn: 50
     rescueMinCount: 1
     rescueMaxCount: 2
-    rescueMinDistanceFromSpawn: 5
+    rescueMinDistanceFromSpawn: 50
   - difficulty: 1
-    blockFillRate: 0.12
+    blockFillRate: 0.012
     breakableBlockRate: 0.4
-    safeRadius: 3.5
+    safeRadius: 35
     mineFillRate: 0.03
     mineMaxCount: 3
-    mineMinDistanceFromSpawn: 4.5
+    mineMinDistanceFromSpawn: 45
     rescueMinCount: 1
     rescueMaxCount: 2
-    rescueMinDistanceFromSpawn: 5
+    rescueMinDistanceFromSpawn: 50
   - difficulty: 2
-    blockFillRate: 0.16
+    blockFillRate: 0.016
     breakableBlockRate: 0.3
-    safeRadius: 3
+    safeRadius: 30
     mineFillRate: 0.05
     mineMaxCount: 4
-    mineMinDistanceFromSpawn: 4
+    mineMinDistanceFromSpawn: 40
     rescueMinCount: 0
     rescueMaxCount: 2
-    rescueMinDistanceFromSpawn: 4.5
+    rescueMinDistanceFromSpawn: 45
   - difficulty: 3
-    blockFillRate: 0.22
+    blockFillRate: 0.022
     breakableBlockRate: 0.2
-    safeRadius: 2.5
+    safeRadius: 25
     mineFillRate: 0.08
     mineMaxCount: 6
-    mineMinDistanceFromSpawn: 3.5
+    mineMinDistanceFromSpawn: 35
     rescueMinCount: 0
     rescueMaxCount: 1
-    rescueMinDistanceFromSpawn: 4
+    rescueMinDistanceFromSpawn: 40
