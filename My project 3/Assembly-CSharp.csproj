@@ -115,6 +115,7 @@
     <Compile Include="Assets\Scripts\System\GameDifficulty.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DungeonDifficulty.cs" />
     <Compile Include="Assets\Scripts\Boss\WeakPointVisual.cs" />
+    <Compile Include="Assets\Scripts\Camera\OverviewCameraPanController.cs" />
     <Compile Include="Assets\Scripts\Camera\OverviewCameraCollision.cs" />
     <Compile Include="Assets\Scripts\Player\ShotDirectionPreview.cs" />
     <Compile Include="Assets\Scripts\Dungeon\DungeonManager.cs" />

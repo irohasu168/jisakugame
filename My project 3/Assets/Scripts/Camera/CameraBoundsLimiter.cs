@@ -1,49 +1,125 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(200)]
 public class CameraBoundsLimiter : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform yawPivot;
-    [SerializeField] private Transform vcamTransform;
+    [SerializeField]
+    private Transform yawPivot;
 
     [Header("World Bounds")]
-    [SerializeField] private Vector2 minXZ = new Vector2(-10f, -10f);
-    [SerializeField] private Vector2 maxXZ = new Vector2(10f, 10f);
+    [SerializeField]
+    private Vector2 minXZ =
+        new Vector2(-70f, -90f);
+
+    [SerializeField]
+    private Vector2 maxXZ =
+        new Vector2(70f, 90f);
 
     [Header("Padding")]
-    [SerializeField] private float pivotPadding = 0.5f;
-    [SerializeField] private float cameraPadding = 0.5f;
+    [SerializeField, Min(0f)]
+    private float pivotPadding = 2f;
 
     [Header("Options")]
-    [SerializeField] private bool clampYawPivot = true;
-    [SerializeField] private bool clampCameraPosition = true;
+    [SerializeField]
+    private bool clampYawPivot = true;
+
+    [Header("Debug")]
+    [SerializeField]
+    private bool showDebugLog = false;
 
     private void LateUpdate()
     {
-        if (clampYawPivot && yawPivot != null)
+        if (!clampYawPivot ||
+            yawPivot == null)
         {
-            ClampTransformXZ(yawPivot, pivotPadding);
+            return;
         }
 
-        if (clampCameraPosition && vcamTransform != null)
+        ClampYawPivot();
+    }
+
+    private void ClampYawPivot()
+    {
+        float minimumX =
+            minXZ.x + pivotPadding;
+
+        float maximumX =
+            maxXZ.x - pivotPadding;
+
+        float minimumZ =
+            minXZ.y + pivotPadding;
+
+        float maximumZ =
+            maxXZ.y - pivotPadding;
+
+        if (minimumX > maximumX)
         {
-            ClampTransformXZ(vcamTransform, cameraPadding);
+            float centerX =
+                (minXZ.x + maxXZ.x) * 0.5f;
+
+            minimumX = centerX;
+            maximumX = centerX;
+        }
+
+        if (minimumZ > maximumZ)
+        {
+            float centerZ =
+                (minXZ.y + maxXZ.y) * 0.5f;
+
+            minimumZ = centerZ;
+            maximumZ = centerZ;
+        }
+
+        Vector3 before =
+            yawPivot.position;
+
+        Vector3 after =
+            before;
+
+        after.x =
+            Mathf.Clamp(
+                after.x,
+                minimumX,
+                maximumX
+            );
+
+        after.z =
+            Mathf.Clamp(
+                after.z,
+                minimumZ,
+                maximumZ
+            );
+
+        yawPivot.position =
+            after;
+
+        if (showDebugLog &&
+            Vector3.Distance(before, after) > 0.001f)
+        {
+            Debug.Log(
+                $"[CameraBounds] Clamped. " +
+                $"{before} -> {after}"
+            );
         }
     }
 
-    private void ClampTransformXZ(Transform target, float padding)
+    public void SetBounds(
+        Vector2 minimumXZ,
+        Vector2 maximumXZ)
     {
-        Vector3 pos = target.position;
+        minXZ = minimumXZ;
+        maxXZ = maximumXZ;
 
-        pos.x = Mathf.Clamp(pos.x, minXZ.x + padding, maxXZ.x - padding);
-        pos.z = Mathf.Clamp(pos.z, minXZ.y + padding, maxXZ.y - padding);
-
-        target.position = pos;
+        if (yawPivot != null)
+        {
+            ClampYawPivot();
+        }
     }
 
-    public void SetBounds(Vector2 min, Vector2 max)
+    public void SetClampEnabled(
+        bool enabled)
     {
-        minXZ = min;
-        maxXZ = max;
+        clampYawPivot = enabled;
     }
 }

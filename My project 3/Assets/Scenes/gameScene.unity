@@ -186,10 +186,13 @@ MonoBehaviour:
   overviewCam: {fileID: 1705757286}
   playerCam: {fileID: 879539660}
   overviewController: {fileID: 1760061470}
+  overviewPanController: {fileID: 0}
   overviewPivotFollower: {fileID: 0}
   playerCameraLookController: {fileID: 0}
-  overviewPriority: 20
-  playerPriority: 10
+  activePriority: 20
+  inactivePriority: 10
+  startWithOverview: 1
+  showDebugLog: 1
 --- !u!114 &63580195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6528,6 +6531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1494074040}
   - {fileID: 876149219}
   m_Father: {fileID: 1760061469}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9625,6 +9629,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486666035}
   m_CullTransparentMesh: 1
+--- !u!1 &1494074039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494074040}
+  - component: {fileID: 1494074041}
+  m_Layer: 0
+  m_Name: OverviewCameraPanController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1494074040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494074039}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1076692040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494074041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494074039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d475547353d1a47904098d20f59b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawPivot: {fileID: 1076692040}
+  referenceCamera: {fileID: 330585545}
+  cameraSwitcher: {fileID: 2137238320}
+  enableRightMousePan: 1
+  mousePanSensitivity: 0.08
+  blockMouseOverUI: 1
+  enableMobileButtonMove: 1
+  mobileMoveSpeed: 25
+  useCameraDirection: 1
+  invertMouseHorizontal: 0
+  invertMouseVertical: 0
+  showDebugLog: 0
 --- !u!1 &1505766869
 GameObject:
   m_ObjectHideFlags: 0
@@ -11154,25 +11214,14 @@ MonoBehaviour:
   yawPivot: {fileID: 1076692040}
   pitchPivot: {fileID: 876149219}
   vcamTransform: {fileID: 1705757284}
-  mouseRotateSpeed: 0.2
-  touchRotateSpeed: 0.15
-  pitchMin: 25
-  pitchMax: 55
-  mouseZoomSpeed: 5
-  pinchZoomSpeed: 0.03
-  minDistance: 6
-  maxDistance: 18
   defaultPitch: 40
   defaultDistance: 9
-  limitCameraInsideStage: 1
-  minXZ: {x: -10, y: -10}
-  maxXZ: {x: 10, y: 10}
-  cameraBoundsPadding: 1
-  distanceSearchSteps: 10
-  oneFingerRotate: 0
-  twoFingerRotate: 1
-  pinchZoom: 1
-  logInput: 0
+  pitchMin: 25
+  pitchMax: 55
+  minimumDistance: 3
+  lockYawRotation: 1
+  fixedYaw: 0
+  showDebugLog: 0
 --- !u!114 &1760061471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11187,6 +11236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pitchPivot: {fileID: 876149219}
   vcamTransform: {fileID: 1705757284}
+  overviewController: {fileID: 1760061470}
   wallLayers:
     serializedVersion: 2
     m_Bits: 1088
@@ -11194,6 +11244,7 @@ MonoBehaviour:
   wallPadding: 0.15
   minDistance: 3
   smoothSpeed: 20
+  showDebugLog: 0
 --- !u!114 &1760061472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11207,13 +11258,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawPivot: {fileID: 1076692040}
-  vcamTransform: {fileID: 1705757284}
   minXZ: {x: -70, y: 90}
   maxXZ: {x: 70, y: 90}
   pivotPadding: 2
-  cameraPadding: 1
   clampYawPivot: 1
-  clampCameraPosition: 1
+  showDebugLog: 0
 --- !u!114 &1760061473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11624,12 +11673,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 203950320}
   yawPivot: {fileID: 1076692040}
-  followTarget: 1
+  panController: {fileID: 1494074041}
+  followTarget: 0
   useFixedY: 1
   fixedY: 0
   offset: {x: 0, y: 0, z: 0}
   followSpeed: 20
+  pauseFollowWhilePanning: 1
+  resumeFollowAfterPan: 0
   snapOnEnable: 1
+  showDebugLog: 0
 --- !u!1 &1852297265
 GameObject:
   m_ObjectHideFlags: 0
@@ -13831,10 +13884,13 @@ MonoBehaviour:
   overviewCam: {fileID: 1705757286}
   playerCam: {fileID: 879539660}
   overviewController: {fileID: 1760061470}
+  overviewPanController: {fileID: 0}
   overviewPivotFollower: {fileID: 0}
   playerCameraLookController: {fileID: 0}
-  overviewPriority: 20
-  playerPriority: 10
+  activePriority: 20
+  inactivePriority: 10
+  startWithOverview: 1
+  showDebugLog: 1
 --- !u!4 &2137238321
 Transform:
   m_ObjectHideFlags: 0
