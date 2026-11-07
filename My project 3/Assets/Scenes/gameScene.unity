@@ -186,9 +186,9 @@ MonoBehaviour:
   overviewCam: {fileID: 1705757286}
   playerCam: {fileID: 879539660}
   overviewController: {fileID: 1760061470}
-  overviewPanController: {fileID: 0}
-  overviewPivotFollower: {fileID: 0}
-  playerCameraLookController: {fileID: 0}
+  overviewPanController: {fileID: 1494074041}
+  overviewPivotFollower: {fileID: 1834414280}
+  playerCameraLookController: {fileID: 1760061473}
   activePriority: 20
   inactivePriority: 10
   startWithOverview: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d2caf472eedf94c8189b18f710b523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turn: {fileID: 0}
+  turn: {fileID: 481971141}
   aim: {fileID: 610712092}
   ball: {fileID: 203950315}
 --- !u!114 &63580196
@@ -1399,10 +1399,12 @@ Transform:
   m_GameObject: {fileID: 203950314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.305, y: 0, z: -1.07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1454660281}
+  - {fileID: 367505752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &203950321
@@ -2017,7 +2019,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: 3.4092917, y: 9.582846, z: -4.5301704}
+  m_LocalPosition: {x: 0, y: 6.4278755, z: -7.660445}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2130,7 +2132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1760061469}
+  m_Father: {fileID: 203950320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385984516
 GameObject:
@@ -3493,7 +3495,7 @@ Transform:
   m_GameObject: {fileID: 533902657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6124754, y: -0.53046036, z: 0.2308793}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3811,7 +3813,7 @@ Transform:
   m_GameObject: {fileID: 614163080}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.0160408, y: 0.73094845, z: 0.4589044}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5743,8 +5745,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879539657}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.015719647, y: 0, z: 0, w: 0.9998765}
-  m_LocalPosition: {x: -4.7142916, y: -4.880454, z: -5.353944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5772,10 +5774,10 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 50
+    FieldOfView: 55
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 500
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
@@ -9339,12 +9341,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454660280}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1760061469}
+  m_Father: {fileID: 203950320}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467238257
 GameObject:
@@ -9678,13 +9680,13 @@ MonoBehaviour:
   cameraSwitcher: {fileID: 2137238320}
   enableRightMousePan: 1
   mousePanSensitivity: 0.08
-  blockMouseOverUI: 1
+  blockMouseOverUI: 0
   enableMobileButtonMove: 1
   mobileMoveSpeed: 25
   useCameraDirection: 1
   invertMouseHorizontal: 0
   invertMouseVertical: 0
-  showDebugLog: 0
+  showDebugLog: 1
 --- !u!1 &1505766869
 GameObject:
   m_ObjectHideFlags: 0
@@ -10517,7 +10519,7 @@ Transform:
   m_GameObject: {fileID: 1666066989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.329}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11188,15 +11190,13 @@ Transform:
   m_GameObject: {fileID: 1760061468}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4092917, y: 3.15497, z: 3.1302748}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1071256909}
   - {fileID: 1076692040}
   - {fileID: 1834414279}
-  - {fileID: 367505752}
-  - {fileID: 1454660281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1760061470
@@ -11239,7 +11239,7 @@ MonoBehaviour:
   overviewController: {fileID: 1760061470}
   wallLayers:
     serializedVersion: 2
-    m_Bits: 1088
+    m_Bits: 1024
   cameraRadius: 0.35
   wallPadding: 0.15
   minDistance: 3
@@ -11275,7 +11275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b581d5b4aabfc94394b09059babe5af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 203950320}
+  target: {fileID: 1454660281}
   yawPivot: {fileID: 1071256909}
   pitchPivot: {fileID: 1086429057}
   vcamTransform: {fileID: 879539659}
@@ -13884,9 +13884,9 @@ MonoBehaviour:
   overviewCam: {fileID: 1705757286}
   playerCam: {fileID: 879539660}
   overviewController: {fileID: 1760061470}
-  overviewPanController: {fileID: 0}
-  overviewPivotFollower: {fileID: 0}
-  playerCameraLookController: {fileID: 0}
+  overviewPanController: {fileID: 1494074041}
+  overviewPivotFollower: {fileID: 1834414280}
+  playerCameraLookController: {fileID: 1760061473}
   activePriority: 20
   inactivePriority: 10
   startWithOverview: 1

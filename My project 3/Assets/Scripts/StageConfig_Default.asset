@@ -18,10 +18,10 @@ MonoBehaviour:
   wallVisualThickness: 8
   wallColliderHeight: 80
   wallColliderThickness: 8
-  gridX: 90
-  gridY: 4
-  gridZ: 110
-  cellSize: {x: 1.2, y: 1.2, z: 1.2}
+  gridX: 45
+  gridY: 6
+  gridZ: 55
+  cellSize: {x: 1.5, y: 1.25, z: 1.5}
   gridPadding: {x: 1, y: 1, z: 1}
   defaultDifficulty: 2
   difficultySettings:
